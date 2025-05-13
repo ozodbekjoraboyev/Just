@@ -27,7 +27,7 @@ function IntroBlock() {
             <p className="text-lg text-gray-600 mb-4">
               {t("intro.freeLesson")}
             </p>
-          <Contakt />
+            <Contakt />
           </div>
 
           <div className="relative mt-10 md:mt-0">

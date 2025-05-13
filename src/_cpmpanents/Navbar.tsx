@@ -60,7 +60,7 @@ function Navbar() {
           </button>
 
           <div className="flex items-center gap-3">
-            {["ru", "en", "uz",].map((lng) => (
+            {["ru", "en", "uz"].map((lng) => (
               <div
                 key={lng}
                 onClick={() => changeLang(lng)}
