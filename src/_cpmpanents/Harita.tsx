@@ -29,10 +29,9 @@ function Harita() {
     <div className="bg-black container m-auto min-h-screen py-12 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-        <h2 className="text-[#ffe000] text-5xl md:text-6xl font-bold mb-8 leading-tight">
-  {t("intro.freeLesson")} {/* Using translation key here */}
-</h2>
-
+          <h2 className="text-[#ffe000] text-5xl md:text-6xl font-bold mb-8 leading-tight">
+            {t("intro.freeLesson")} {/* Using translation key here */}
+          </h2>
 
           {/* Form Section */}
           <div className="max-w-2xl mx-auto">
@@ -51,6 +50,9 @@ function Harita() {
                 <option value="">{t("form.selectCourse")}</option>
                 <option value="course1">{t("form.course1")}</option>
                 <option value="course2">{t("form.course2")}</option>
+                <option value="course3">{t("form.course3")}</option>
+                <option value="course4">{t("form.course4")}</option>
+                <option value="course5">{t("form.course5")}</option>
               </select>
               <input
                 type="number"

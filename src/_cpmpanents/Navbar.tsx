@@ -3,6 +3,7 @@ import logo from "../../public/logo.svg";
 import { Dropdown, Menu } from "antd";
 import { DownOutlined, MenuOutlined, CloseOutlined } from "@ant-design/icons";
 import { useTranslation } from "react-i18next";
+import { Home, House, Mail, PencilLine, User } from "lucide-react";
 
 function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -91,19 +92,27 @@ function Navbar() {
         {mobileMenuOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-black z-50 p-4 animate-slideDown">
             <div className="flex flex-col gap-4">
-              <NavItem>{t("home")}</NavItem>
-              <NavItem>{t("about")}</NavItem>
+              <div className=" flex items-center gap-4">
+                <Home />
+                <NavItem> {t("home")}</NavItem>
+              </div>
+              <div className=" flex items-center gap-4">
+                <PencilLine />
+                <NavItem>{t("about")}</NavItem>
+              </div>
               <Dropdown overlay={courseMenu} placement="bottomLeft" arrow>
                 <p className="cursor-pointer flex items-center gap-2 border border-amber-400 px-3 py-1 rounded-2xl hover:text-[#ffe000] hover:bg-black hover:border-amber-300 transition-all duration-300">
-                  {t("courses")}
+                  <Mail /> {t("courses")}
                   <DownOutlined
                     className="animate-bounce"
                     style={{ animationDuration: "2s" }}
                   />
                 </p>
               </Dropdown>
-
-              <NavItem>{t("contact")}</NavItem>
+              <div className=" flex items-center gap-4">
+                <User />
+                <NavItem>{t("contact")}</NavItem>
+              </div>
 
               <button className="bg-[#ffe000] text-black font-semibold px-4 py-2 rounded hover:bg-yellow-300 transition-all duration-300 mt-4 shadow-md shadow-yellow-300">
                 {t("call")}
