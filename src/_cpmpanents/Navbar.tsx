@@ -22,13 +22,11 @@ function Navbar() {
     />
   );
 
-
-const NavItem = ({ children }: { children: ReactNode }) => (
-  <p className="hover:text-[#ffe000] transition-all duration-300 cursor-pointer hover:scale-105">
-    {children}
-  </p>
-);
-
+  const NavItem = ({ children }: { children: ReactNode }) => (
+    <p className="hover:text-[#ffe000] transition-all duration-300 cursor-pointer hover:scale-105">
+      {children}
+    </p>
+  );
 
   return (
     <div>

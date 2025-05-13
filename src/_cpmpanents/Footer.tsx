@@ -1,19 +1,15 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import telegram from "../../public/telegram.png";
 import youtube from "../../public/yotube.png";
 import instagram from "../../public/instagram.png";
 
 function Footer() {
-  const courses = [
-    "Курсы",
-    "Робототехника",
-    "Английский для взрослых",
-    "Английский для детей",
-    "Шахматы",
-    "Живопись",
-  ];
+  const { t } = useTranslation();
 
-  const contacts = ["Контакты", "Телеграм", "Инстаграм", "Ютюб"];
+  // Explicitly define these as arrays of strings
+  const courses: any = t("footer.courses", { returnObjects: true });
+  const contacts: any = t("footer.contactLinks", { returnObjects: true });
 
   return (
     <footer className="bg-[#ffe000] container m-auto py-10 px-4">
@@ -22,30 +18,30 @@ function Footer() {
           {/* Logo & Slogan */}
           <div className="flex flex-col items-center md:items-start gap-4">
             <div className="bg-gray-800 w-24 h-24 rounded-full flex items-center justify-center text-white font-bold text-lg md:text-xl">
-              ЛОГО
+              {t("footer.logo")}
             </div>
             <p className="text-gray-800 text-center md:text-left text-sm md:text-base">
-              SLOGAN: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              {t("footer.slogan")}
             </p>
             <div className="flex gap-4">
               <a href="#" className="hover:opacity-80 transition-opacity">
                 <img
                   src={telegram}
-                  alt="Telegram"
+                  alt={t("footer.telegram")}
                   className="h-6 w-6 sm:h-8 sm:w-8"
                 />
               </a>
               <a href="#" className="hover:opacity-80 transition-opacity">
                 <img
                   src={youtube}
-                  alt="YouTube"
+                  alt={t("footer.youtube")}
                   className="h-6 w-6 sm:h-8 sm:w-8"
                 />
               </a>
               <a href="#" className="hover:opacity-80 transition-opacity">
                 <img
                   src={instagram}
-                  alt="Instagram"
+                  alt={t("footer.instagram")}
                   className="h-6 w-6 sm:h-8 sm:w-8"
                 />
               </a>
@@ -55,10 +51,10 @@ function Footer() {
           {/* Courses */}
           <div className="flex flex-col items-center md:items-start">
             <h3 className="text-black font-bold text-lg md:text-xl mb-3">
-              Курсы
+              {t("footer.coursesTitle")}
             </h3>
             <ul className="space-y-2 text-sm md:text-base">
-              {courses.map((course, index) => (
+              {courses.map((course: string, index: number) => (
                 <li key={index}>
                   <a
                     href="#"
@@ -74,10 +70,10 @@ function Footer() {
           {/* Contacts */}
           <div className="flex flex-col  items-center md:items-start">
             <h3 className="text-black font-bold text-lg md:text-xl mb-3">
-              Контакты
+              {t("footer.contactsTitle")}
             </h3>
             <ul className="space-y-2 text-sm md:text-base">
-              {contacts.map((contact, index) => (
+              {contacts.map((contact: string, index: number) => (
                 <li key={index}>
                   {index === 0 ? (
                     <span className="text-gray-800">{contact}</span>
@@ -96,7 +92,7 @@ function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-10 pt-5 text-center text-gray-800 text-sm md:text-base">
-          <p>© {new Date().getFullYear()} JustRobotics. Все права защищены.</p>
+          <p>{t("footer.copyright", { year: new Date().getFullYear() })}</p>
         </div>
       </div>
     </footer>
