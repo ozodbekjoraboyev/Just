@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, type ReactNode } from "react";
 import logo from "../../public/logo.svg";
 import { Dropdown, Menu } from "antd";
 import { DownOutlined, MenuOutlined, CloseOutlined } from "@ant-design/icons";
@@ -22,11 +22,13 @@ function Navbar() {
     />
   );
 
-  const NavItem = ({ children }) => (
-    <p className="hover:text-[#ffe000] transition-all duration-300 cursor-pointer hover:scale-105">
-      {children}
-    </p>
-  );
+
+const NavItem = ({ children }: { children: ReactNode }) => (
+  <p className="hover:text-[#ffe000] transition-all duration-300 cursor-pointer hover:scale-105">
+    {children}
+  </p>
+);
+
 
   return (
     <div>
