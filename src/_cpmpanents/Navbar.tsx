@@ -3,7 +3,7 @@ import logo from "../../public/logo.svg";
 import { Dropdown, Menu } from "antd";
 import { DownOutlined, MenuOutlined, CloseOutlined } from "@ant-design/icons";
 import { useTranslation } from "react-i18next";
-import { Home, House, Mail, PencilLine, User } from "lucide-react";
+import { Home, Mail, PencilLine, User } from "lucide-react";
 
 function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -54,14 +54,13 @@ function Navbar() {
           <NavItem>{t("contact")}</NavItem>
         </div>
 
-        {/* Desktop Actions */}
         <div className="hidden md:flex items-center gap-6 lg:gap-12">
           <button className="bg-[#ffe000] text-black font-semibold px-4 py-2 rounded hover:bg-yellow-300 transition-all duration-300 hover:scale-105 shadow-md shadow-yellow-300">
             {t("call")}
           </button>
 
           <div className="flex items-center gap-3">
-            {["ru", "uz"].map((lng) => (
+            {["ru", "en", "uz",].map((lng) => (
               <div
                 key={lng}
                 onClick={() => changeLang(lng)}

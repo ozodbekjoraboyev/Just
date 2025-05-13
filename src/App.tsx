@@ -7,13 +7,11 @@ import IntroBlock from "./_cpmpanents/IntroBlock";
 function App() {
   return (
     <>
-      <div className="  ">
-        <IntroBlock />
-        <Card />
-        <Carusel />
-        <Harita />
-        <Footer />
-      </div>
+      <IntroBlock />
+      <Card />
+      <Carusel />
+      <Harita />
+      <Footer />
     </>
   );
 }

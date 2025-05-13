@@ -153,6 +153,79 @@ i18n
           },
         },
       },
+     en: {
+  translation: {
+    home: "Home",
+    about: "About Us",
+    courses: "Courses",
+    contact: "Contacts",
+    call: "Call Now",
+    intro: {
+      subtitle: "Your guide to the world of technology and art",
+      freeLesson: "Get your first lesson for free",
+      goToCourses: "GO TO COURSES",
+      students: "Happy Students",
+      teachers: "Teachers",
+      groups: "Groups",
+    },
+    description_part_1:
+      "This is a modern educational center specializing in technology, art, and education. We provide a comfortable and supportive environment for students to develop their talents and skills.",
+    description_part_2:
+      "It's not just about courses — it's a community of goal-oriented people offering events, masterclasses, and competitions. The center's convenient location ensures easy access for everyone.",
+    author_courses_title: "Author's Courses by JustRobotics",
+    robotics: "Robotics",
+    painting_kids: "Drawing for Children",
+    painting_adults: "Drawing for Adults",
+    english_kids: "English for Kids",
+    chess: "Chess",
+    form: {
+      namePlaceholder: "Your Name",
+      phonePlaceholder: "Your Phone Number",
+      selectCourse: "Select a Course",
+      course1: "Robotics",
+      course2: "Drawing for Adults",
+      course3: "Drawing for Children",
+      course4: "Chess",
+      course5: "English",
+      agePlaceholder: "Age",
+      getFreeLesson: "Get Free Lesson",
+    },
+    branches: {
+      branch1: "C4 Branch",
+      branch2: "Beruni Branch",
+    },
+    infoCards: {
+      address: "Address",
+      schedule: "Working Hours",
+      phone: "Phone Numbers",
+    },
+    geoLocating: "Detecting current location...",
+    findMe: "Find Me",
+    yourLocation: "Your Location",
+    footer: {
+      logo: "LOGO",
+      slogan:
+        "SLOGAN: Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      coursesTitle: "Courses",
+      contactsTitle: "Contacts",
+      telegram: "Telegram",
+      instagram: "Instagram",
+      youtube: "YouTube",
+      courses: [
+        "Courses",
+        "Robotics",
+        "English for Adults",
+        "English for Children",
+        "Chess",
+        "Drawing",
+      ],
+      contactLinks: ["Contacts", "Telegram", "Instagram", "YouTube"],
+      copyright:
+        "© {{year}} JustRobotics. All rights reserved.",
+    },
+  },
+}
+
     },
   });
 

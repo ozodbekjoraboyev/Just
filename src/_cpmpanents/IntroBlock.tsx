@@ -2,6 +2,7 @@ import React from "react";
 import bot from "../../public/bot.png";
 import bgImage from "../../public/bgImage.png";
 import { useTranslation } from "react-i18next";
+import Contakt from "./Contakt";
 
 function IntroBlock() {
   const { t } = useTranslation();
@@ -26,9 +27,7 @@ function IntroBlock() {
             <p className="text-lg text-gray-600 mb-4">
               {t("intro.freeLesson")}
             </p>
-            <button className="bg-black hover:bg-gray-800 transition-colors text-[#ffe000] font-semibold px-8 py-3 rounded-lg w-full max-w-[250px]">
-              {t("intro.goToCourses")}
-            </button>
+          <Contakt />
           </div>
 
           <div className="relative mt-10 md:mt-0">
@@ -51,14 +50,16 @@ function IntroBlock() {
             className="bg-[#ffe000] h-32 w-80 flex flex-col justify-center items-center text-xl font-semibold text-black rounded hover:bg-yellow-300 transition"
             style={{ boxShadow: "0 0 20px rgba(251, 191, 46, 0.9)" }}
           >
-            25+ <span className="text-base font-normal">{t("intro.teachers")}</span>
+            25+{" "}
+            <span className="text-base font-normal">{t("intro.teachers")}</span>
           </div>
 
           <div
             className="bg-[#ffe000] h-32 w-80 flex flex-col justify-center items-center text-xl font-semibold text-black rounded hover:bg-yellow-300 transition"
             style={{ boxShadow: "0 0 20px rgba(251, 191, 46, 0.9)" }}
           >
-            60+ <span className="text-base font-normal">{t("intro.groups")}</span>
+            60+{" "}
+            <span className="text-base font-normal">{t("intro.groups")}</span>
           </div>
         </div>
       </div>
