@@ -118,7 +118,7 @@ function Navbar() {
               </button>
 
               <div className="flex gap-4 justify-center mt-4">
-                {["ru", "uz"].map((lng) => (
+                {["ru","en", "uz"].map((lng) => (
                   <div
                     key={lng}
                     onClick={() => changeLang(lng)}
